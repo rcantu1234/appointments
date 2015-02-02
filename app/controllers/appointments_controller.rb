@@ -4,7 +4,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @appointments = Appointment.sort_by(:age)
+    @appointments = Appointment.all
   end
 
   # GET /appointments/1
