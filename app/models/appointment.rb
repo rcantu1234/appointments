@@ -5,7 +5,7 @@ class Appointment < ActiveRecord::Base
 
     validates :age, numericality: { greater_than: 21 }
 
-    validates :first_name, :uniqueness => true
+    validates :first_name, :uniqueness => { :message => " has been used."}
 
     # validates_uniqueness_of scope: :appt_time, message: " there is already an appointment."
 
