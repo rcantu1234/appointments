@@ -8,7 +8,7 @@ class Appointment < ActiveRecord::Base
 
     validates_uniqueness_of :age, scope: :appt_time, message: " there is already an appointment."
 
-    scope :age, where(:age => true)
+    # scope :age, where(:age => true)
 
 end
 
