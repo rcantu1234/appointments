@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :appointments
+
+  root 'admin#index'
+  resources :appointments, :path => "admin"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
