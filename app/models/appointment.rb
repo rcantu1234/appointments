@@ -7,6 +7,8 @@ class Appointment < ActiveRecord::Base
 
     validates :first_name, :uniqueness => { :message => " has been used."}
 
+    validates :appt_time, :uniqueness => { :message => " the appointment has been taken." }
+
     # validates_uniqueness_of scope: :appt_time, message: " there is already an appointment."
 
     # scope :age, where(:age => true)
