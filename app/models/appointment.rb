@@ -9,7 +9,7 @@ class Appointment < ActiveRecord::Base
 
     validates :appt_time, :uniqueness => { :message => " has been taken." }
 
-    scope :by_state, -> { where(state: 'Texas') }
+    # scope :by_state, -> { where(state: 'Texas') }
 
 end
 
