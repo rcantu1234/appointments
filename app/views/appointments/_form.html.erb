@@ -25,7 +25,8 @@
   </div>
   <div class="field">
     <%= f.label :date_of_birth %><br>
-    <%= f.date_select :date_of_birth %> <!-- :start_year=>1900,:end_year=>2015 %> -->
+    <%= f.date_select :dob, :start_year=>1900,:end_year=>2015 %>
+    <%= f.date_select :date_of_birth :start_year=>1900,:end_year=>2015 %>
   </div>
   <div class="field">
     <%= f.label :city %><br>
@@ -41,7 +42,7 @@
   </div>
   <div class="field">
     <%= f.label :urgency %><br>
-    <%= f.text_field :urgency %>
+    <%= f.select :urgency, options_for_select(%w[High Low None]) %>
   </div>
   <div class="field">
     <%= f.label :appt_time %><br>
