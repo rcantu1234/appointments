@@ -9,9 +9,7 @@ class Appointment < ActiveRecord::Base
 
     validates :appt_time, :uniqueness => { :message => " has been taken." }
 
-    # validates_uniqueness_of scope: :appt_time, message: " there is already an appointment."
-
-    # scope :age, where(:age => true)
+    scope :by_state, -> { where(state: 'Texas') }
 
 end
 
