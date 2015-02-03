@@ -41,7 +41,7 @@
   </div>
   <div class="field">
     <%= f.label :urgency %><br>
-    <%= f.text_field :urgency %>
+    <%= f.select :urgency, options_for_select(%w[High Low None]) %>
   </div>
   <div class="field">
     <%= f.label :appt_time %><br>

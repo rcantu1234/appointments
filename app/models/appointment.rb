@@ -9,7 +9,7 @@ class Appointment < ActiveRecord::Base
 
     validates :appt_time, :uniqueness => { :message => " has been taken." }
 
-    # scope :by_state, -> { where(state: 'Texas') }
+    validates_length_of :zip_code.length, :maximum => 5, :allow_blank => false
 
 end
 
