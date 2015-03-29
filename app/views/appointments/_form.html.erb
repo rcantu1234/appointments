@@ -41,7 +41,8 @@
   </div>
   <div class="field">
     <%= f.label :urgency %><br>
-    <%= f.text_field :urgency %>
+    <%= f.select :urgency, [['High'], ['Low'], ['None']] %>
+  </div>
   </div>
   <div class="field">
     <%= f.label :appt_time %><br>
