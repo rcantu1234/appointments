@@ -22,15 +22,15 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
-        <td><%= appointment.first_name %></td>
-        <td><%= appointment.last_name %></td>
+        <td><%= appointment.first_name.capitalize %></td>
+        <td><%= appointment.last_name.capitalize %></td>
         <td><%= appointment.age %></td>
         <td><%= appointment.date_of_birth %></td>
         <td><%= appointment.city %></td>
         <td><%= appointment.state %></td>
         <td><%= appointment.zip_code %></td>
         <td><%= appointment.urgency %></td>
-        <td><%= appointment.appt_time %></td>
+        <td><%= appointment.appt_time.to_formatted_s(:long) %></td>
         <td><%= appointment.note %></td>
         <td><%= link_to 'Show', appointment %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>

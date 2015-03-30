@@ -4,12 +4,17 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @appointments = Appointment.order(:first_name)
+    @appointments = Appointment.order(:age)
+  end
+
+  def admin
+    @appointments = Appointment.order(:age)
   end
 
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+    @appointment = Appointment.find(params[:id])
   end
 
   # GET /appointments/new
